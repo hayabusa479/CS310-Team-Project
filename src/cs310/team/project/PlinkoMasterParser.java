@@ -137,6 +137,19 @@ public class PlinkoMasterParser {
                         break;
                     } 
                     
+                    if(exclusions.contains("22") && !exclusions.contains("01")) {
+                        System.out.println("Break\n");
+                    }
+        
+                     if (exclusions.contains("240") && exclusions.contains("01") || exclusions.contains("02") || 
+                             exclusions.contains("8006") || exclusions.contains("8026")) {
+                        System.out.println("Manditory Data Relationship Error");    
+                    }
+
+                    if(exclusions.contains("243") && exclusions.contains("01")) {
+                        System.out.println("Manditory Data Relationship Error"); 
+                    }
+                    
                     System.out.println(results);
 
                 }
