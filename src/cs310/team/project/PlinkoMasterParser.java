@@ -146,8 +146,37 @@ public class PlinkoMasterParser {
                         System.out.println("Manditory Data Relationship Error");    
                     }
 
-                    if(exclusions.contains("243") && exclusions.contains("01")) {
-                        System.out.println("Manditory Data Relationship Error"); 
+                    if(exclusions.contains("390n") && exclusions.contains("391n") 
+                       || exclusions.contains("394n") || exclusions.contains("8111")) {
+                        System.out.println("break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("392n") && exclusions.contains("393n")) {
+                         System.out.println("break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("394n") && exclusions.contains("8111")) {
+                         System.out.println("break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("8006") && exclusions.contains("01") 
+                       || exclusions.contains("37")) {
+                          System.out.println("break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("8018") && exclusions.contains("8017")) {
+                          System.out.println("break\n");
+                        break;
+                    }
+                    
+                    if(exclusions.contains("8026") && exclusions.contains("02")
+                      || exclusions.contains("8006")) {
+                        System.out.println("break\n");
+                        break; 
                     }
                     
                     System.out.println(results);
